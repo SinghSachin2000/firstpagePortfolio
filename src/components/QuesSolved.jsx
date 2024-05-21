@@ -22,7 +22,7 @@ const QuesSolved = () => {
 
   return (
     <div>
-      <div className='w-[400px] h-[500px] bg-white m-10 rounded-2xl p-4 flex flex-col items-center'>
+      <div className='w-[350px] sm:w-[400px] h-[500px] bg-white m-10 rounded-2xl p-4 flex flex-col items-center'>
         <div className='font-bold text-lg text-slate-600'>Question Solved</div>
         <div className='h-[2px] w-[300px] rounded-full ml-5 mt-2 bg-slate-200'></div>
         <div className='flex flex-col items-center'>

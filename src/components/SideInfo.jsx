@@ -13,7 +13,7 @@ const SideInfo = () => {
   };
 
   return (
-    <div className='w-[350px] h-full bg-slate-50 ml-10 mt-10 rounded-xl relative'>
+    <div className='w-[350px] h-[500px] sm:h-[100%] bg-slate-50 ml-10 mt-10 rounded-xl relative pb-4'>
       <div className='flex'>
         <img src={Unknown} alt="" className='h-20 w-20 rounded-full bg-slate-400 ml-4 mt-4 '/>
         <div className='pl-4 pt-3 mt-4'>

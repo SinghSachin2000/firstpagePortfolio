@@ -88,7 +88,7 @@ const TopicAnalysis = () => {
  
   return (
     <div>
-      <div className=' w-[400px] bg-white h-[500px] m-10 rounded-2xl p-4' >
+      <div className=' w-[350px] sm:w-[400px] bg-white h-[450px] sm:h-[500px] m-10 rounded-2xl p-4 mb-[30px]' >
       
         <div className='font-bold text-slate-600 pl-9'>Topic Analysis</div>
          <div className='p-4'>

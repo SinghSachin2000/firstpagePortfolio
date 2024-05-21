@@ -1,6 +1,6 @@
 // TestScore.jsx
 import React from 'react';
-import { ResponsiveContainer, LineChart, Line, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, Tooltip } from 'recharts';
 
 const chapterData = [
     { chapter: 1, numberOfTests: 6 },
@@ -58,7 +58,7 @@ const TestScore = ({ selectedChapter }) => {
     const latestTest = testData[testData.length - 1];
 
     return (
-        <div className='w-[400px] h-[250px] bg-white m-10 rounded-2xl p-4'>
+        <div className='w-[350px] sm:w-[400px] h-[250px] bg-white m-10 rounded-2xl p-4'>
             <div className='flex justify-between'>
                 <div className='mb-4 flex flex-col items-center p-4'>
                     <div className='font-bold text-slate-600'>Test Score</div>

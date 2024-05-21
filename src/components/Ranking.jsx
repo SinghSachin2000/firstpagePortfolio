@@ -29,7 +29,7 @@ const RankingData = [
 
 const Ranking = () => {
   return (
-    <div className='w-[400px] h-[550px] bg-white m-10 rounded-2xl p-4 flex flex-col items-center'>
+    <div className='w-[350px] sm:w-[400px] h-[550px] bg-white m-10 rounded-2xl p-4 flex flex-col items-center'>
           
     <div className='font-bold text-lg text-slate-600'>Ranking</div>
 

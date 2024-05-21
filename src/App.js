@@ -17,24 +17,28 @@ function App() {
     setSelectedChapter(chapter);
   };
   return (
-    <div className='mainApp flex flex-row'>
-    <SideInfo/>
-    <div>
-    <TopDatesQues/>
-      <div className='scawldata scroll-auto flex'>
-         <div className='heatSec'>
-         <TotalTest onSelectChapter={handleSelectChapter} />
-         <TestScore selectedChapter={selectedChapter} />
-         <Awards/>
-         <TopicAnalysis/>
-         </div>
-         <div> 
-             <QuesSolved/>
-             <Ranking/>
-         </div>
-      </div>
-    </div>
-   
+    <div className='mainApp flex flex-col sm:flex-row'>
+
+       <SideInfo/>
+
+       <div>
+          <TopDatesQues/>
+
+           <div className='scawldata scroll-auto flex'>
+               <div className='heatSec'>
+                 <TotalTest onSelectChapter={handleSelectChapter} />
+                 <TestScore selectedChapter={selectedChapter} />
+                 <Awards/>
+                 <TopicAnalysis/>
+               </div>
+
+               <div> 
+                <QuesSolved/>
+                <Ranking/>
+              </div>
+           </div>
+        </div>
+    
     </div>
   );
 }

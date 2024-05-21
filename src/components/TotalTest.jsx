@@ -16,7 +16,7 @@ const TotalTest = ({ onSelectChapter }) => {
 
   return (
     <div>
-      <div className='w-[400px] h-[200px] bg-white m-10 rounded-2xl flex justify-evenly text-center items-center'>
+      <div className='w-[350px] sm:w-[400px] h-[200px] bg-white m-10 rounded-2xl flex justify-evenly text-center items-center'>
         <div>
           <div className='font-bold text-2xl text-slate-600'>Total Test</div>
           <div className='font-bold text-8xl'>86</div>

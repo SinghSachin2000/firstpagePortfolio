@@ -1,0 +1,277 @@
+import React from 'react'
+import CalendarHeatmap from 'react-calendar-heatmap';
+// import 'react-calendar-heatmap/dist/styles.css';
+import { Tooltip  } from 'react-tooltip';
+import './HeatMap2.css'
+const HeatMap2 = () => {
+
+
+    const today = new Date();
+    const startDate = new Date(today.getFullYear(), today.getMonth() - 11, 1);
+    const endDate = today;
+
+    const convertDate = (dateStr) => {
+        const [day, month, year] = dateStr.split('-');
+        return `${year}-${month}-${day}`;
+      };
+
+    const data =[
+        { date: "10-06-2023", count: 1 },
+        { date: "11-06-2023", count: 2 },
+        { date: "12-06-2023", count: 0 },
+        { date: "13-06-2023", count: 3 },
+        { date: "14-06-2023", count: 4 },
+        { date: "15-06-2023", count: 3 },
+        { date: "16-06-2023", count: 4 },
+        { date: "17-06-2023", count: 5 },
+        { date: "18-06-2023", count: 5 },
+        { date: "19-06-2023", count: 2 },
+        { date: "20-06-2023", count: 4 },
+        { date: "21-06-2023", count: 1 },
+        { date: "22-06-2023", count: 4 },
+        { date: "23-06-2023", count: 3 },
+        { date: "24-06-2023", count: 4 },
+        { date: "25-06-2023", count: 1 },
+        { date: "26-06-2023", count: 2 },
+        { date: "27-06-2023", count: 0 },
+        { date: "28-06-2023", count: 0 },
+        { date: "29-06-2023", count: 1 },
+        { date: "30-06-2023", count: 4 },
+        { date: "01-07-2023", count: 3 },
+        { date: "02-07-2023", count: 5 },
+        { date: "03-07-2023", count: 5 },
+        { date: "04-07-2023", count: 4 },
+        { date: "05-07-2023", count: 3 },
+        { date: "06-07-2023", count: 4 },
+        { date: "07-07-2023", count: 4 },
+        { date: "08-07-2023", count: 4 },
+        { date: "09-07-2023", count: 4 },
+        { date: "10-07-2023", count: 4 },
+        { date: "11-07-2023", count: 5 },
+        { date: "12-07-2023", count: 3 },
+        { date: "13-07-2023", count: 1 },
+        { date: "14-07-2023", count: 0 },
+        { date: "15-07-2023", count: 0 },
+        { date: "16-07-2023", count: 0 },
+        { date: "17-07-2023", count: 5 },
+        { date: "18-07-2023", count: 3 },
+        { date: "19-07-2023", count: 2 },
+        { date: "20-07-2023", count: 4 },
+        { date: "21-07-2023", count: 4 },
+        { date: "22-07-2023", count: 4 },
+        { date: "23-07-2023", count: 0 },
+        { date: "24-07-2023", count: 4 },
+        { date: "25-07-2023", count: 1 },
+        { date: "26-07-2023", count: 2 },
+        { date: "27-07-2023", count: 3 },
+        { date: "28-07-2023", count: 4 },
+        { date: "29-07-2023", count: 5 },
+        { date: "30-07-2023", count: 4 },
+        { date: "31-07-2023", count: 4 },
+        { date: "01-07-2023", count: 0 },
+        { date: "02-08-2024", count: 1 },
+        { date: "03-08-2024", count: 2 },
+        { date: "10-08-2023", count: 1 },
+        { date: "11-08-2023", count: 2 },
+        { date: "12-08-2023", count: 0 },
+        { date: "13-08-2023", count: 3 },
+        { date: "14-08-2023", count: 4 },
+        { date: "15-08-2023", count: 3 },
+        { date: "16-08-2023", count: 4 },
+        { date: "17-08-2023", count: 5 },
+        { date: "18-08-2023", count: 5 },
+        { date: "19-08-2023", count: 2 },
+        { date: "20-08-2023", count: 4 },
+        { date: "21-08-2023", count: 1 },
+        { date: "22-08-2023", count: 4 },
+        { date: "23-08-2023", count: 3 },
+        { date: "24-08-2023", count: 4 },
+        { date: "25-08-2023", count: 1 },
+        { date: "26-08-2023", count: 2 },
+        { date: "27-08-2023", count: 0 },
+        { date: "28-10-2023", count: 0 },
+        { date: "29-10-2023", count: 1 },
+        { date: "30-10-2023", count: 4 },
+        { date: "01-10-2023", count: 3 },
+        { date: "02-10-2023", count: 5 },
+        { date: "03-10-2023", count: 5 },
+        { date: "04-10-2023", count: 4 },
+        { date: "05-10-2023", count: 3 },
+        { date: "06-10-2023", count: 4 },
+        { date: "07-10-2023", count: 4 },
+        { date: "08-10-2023", count: 4 },
+        { date: "09-10-2023", count: 4 },
+        { date: "10-10-2023", count: 4 },
+        { date: "11-10-2023", count: 5 },
+        { date: "12-10-2023", count: 3 },
+        { date: "13-11-2023", count: 1 },
+        { date: "14-11-2023", count: 0 },
+        { date: "15-11-2023", count: 0 },
+        { date: "16-11-2023", count: 0 },
+        { date: "17-11-2023", count: 5 },
+        { date: "18-11-2023", count: 3 },
+        { date: "19-11-2023", count: 2 },
+        { date: "20-11-2023", count: 4 },
+        { date: "21-11-2023", count: 4 },
+        { date: "22-11-2023", count: 4 },
+        { date: "23-11-2023", count: 0 },
+        { date: "24-11-2023", count: 4 },
+        { date: "25-11-2023", count: 1 },
+        { date: "26-11-2023", count: 2 },
+        { date: "27-12-2023", count: 3 },
+        { date: "28-12-2023", count: 4 },
+        { date: "29-12-2023", count: 5 },
+        { date: "30-12-2023", count: 4 },
+        { date: "31-12-2023", count: 4 },
+        { date: "01-12-2023", count: 0 },
+        { date: "02-12-2023", count: 1 },
+        { date: "03-12-2023", count: 2 },
+
+        { date: "10-01-2024", count: 1 },
+        { date: "11-01-2024", count: 2 },
+        { date: "12-01-2024", count: 0 },
+        { date: "13-01-2024", count: 3 },
+        { date: "14-01-2024", count: 4 },
+        { date: "15-01-2024", count: 3 },
+        { date: "16-01-2024", count: 4 },
+        { date: "17-01-2024", count: 5 },
+        { date: "18-01-2024", count: 5 },
+        { date: "19-01-2024", count: 2 },
+        { date: "20-01-2024", count: 4 },
+        { date: "21-01-2024", count: 1 },
+        { date: "22-01-2024", count: 4 },
+        { date: "23-01-2024", count: 3 },
+        { date: "24-01-2024", count: 4 },
+        { date: "25-01-2024", count: 1 },
+        { date: "26-01-2024", count: 2 },
+        { date: "27-01-2024", count: 0 },
+        { date: "28-01-2024", count: 0 },
+        { date: "29-02-2024", count: 1 },
+        { date: "30-02-2024", count: 4 },
+        { date: "01-02-2024", count: 3 },
+        { date: "02-02-2024", count: 5 },
+        { date: "03-02-2024", count: 5 },
+        { date: "04-02-2024", count: 4 },
+        { date: "05-02-2024", count: 3 },
+        { date: "06-02-2024", count: 4 },
+        { date: "07-02-2024", count: 4 },
+        { date: "08-02-2024", count: 4 },
+        { date: "09-02-2024", count: 4 },
+        { date: "10-02-2024", count: 4 },
+        { date: "11-02-2024", count: 5 },
+        { date: "12-02-2024", count: 3 },
+        { date: "13-02-2024", count: 1 },
+        { date: "14-02-2024", count: 0 },
+        { date: "15-03-2024", count: 0 },
+        { date: "16-03-2024", count: 0 },
+        { date: "17-03-2024", count: 5 },
+        { date: "18-03-2024", count: 3 },
+        { date: "19-03-2024", count: 2 },
+        { date: "20-03-2024", count: 4 },
+        { date: "21-03-2024", count: 4 },
+        { date: "22-03-2024", count: 4 },
+        { date: "23-03-2024", count: 0 },
+        { date: "24-03-2024", count: 4 },
+        { date: "25-03-2024", count: 1 },
+        { date: "26-03-2024", count: 2 },
+        { date: "27-03-2024", count: 3 },
+        { date: "28-03-2024", count: 4 },
+        { date: "29-03-2024", count: 5 },
+        { date: "30-03-2024", count: 4 },
+        { date: "31-03-2024", count: 4 },
+        { date: "01-03-2024", count: 0 },
+        { date: "02-03-2024", count: 1 },
+        { date: "03-04-2024", count: 2 },
+        { date: "10-04-2024", count: 1 },
+        { date: "11-04-2024", count: 2 },
+        { date: "12-04-2024", count: 0 },
+        { date: "13-04-2024", count: 3 },
+        { date: "14-04-2024", count: 4 },
+        { date: "15-04-2024", count: 3 },
+        { date: "16-04-2024", count: 4 },
+        { date: "17-04-2024", count: 5 },
+        { date: "18-04-2024", count: 5 },
+        { date: "19-04-2024", count: 2 },
+        { date: "20-04-2024", count: 4 },
+        { date: "21-04-2024", count: 1 },
+        { date: "22-04-2024", count: 4 },
+        { date: "23-04-2024", count: 3 },
+        { date: "24-05-2024", count: 4 },
+        { date: "25-05-2024", count: 1 },
+        { date: "26-05-2024", count: 2 },
+        { date: "27-05-2024", count: 0 },
+        { date: "28-05-2024", count: 0 },
+        { date: "29-05-2024", count: 1 },
+        { date: "30-05-2024", count: 4 },
+        { date: "01-05-2024", count: 3 },
+        { date: "02-05-2024", count: 5 },
+        { date: "03-05-2024", count: 5 },
+        { date: "04-05-2024", count: 4 },
+        { date: "05-05-2024", count: 3 },
+        { date: "06-05-2024", count: 4 },
+        { date: "07-05-2024", count: 4 },
+        { date: "08-05-2024", count: 4 },
+        { date: "09-05-2024", count: 4 },
+        { date: "10-05-2024", count: 4 },
+        { date: "11-05-2024", count: 5 },
+        { date: "12-05-2024", count: 3 },
+        { date: "13-05-2024", count: 1 },
+        { date: "14-05-2024", count: 0 },
+        { date: "15-05-2024", count: 0 },
+        { date: "16-05-2024", count: 0 },
+        { date: "17-05-2024", count: 5 },
+        { date: "18-05-2024", count: 3 },
+        { date: "19-05-2024", count: 2 },
+        { date: "20-05-2024", count: 4 },
+        { date: "21-05-2024", count: 4 },
+        { date: "22-05-2024", count: 4 },
+        { date: "23-05-2024", count: 0 },
+        { date: "24-05-2024", count: 4 },
+        { date: "25-05-2024", count: 1 },
+        { date: "26-05-2024", count: 2 },
+        { date: "27-05-2024", count: 3 },
+        { date: "28-05-2024", count: 4 },
+        { date: "29-05-2024", count: 5 },
+        { date: "30-05-2024", count: 4 },
+        { date: "31-05-2024", count: 4 },
+        { date: "01-05-2024", count: 0 },
+        { date: "02-05-2024", count: 1 },
+        { date: "03-05-2024", count: 2 },
+    ]
+  const formattedData = data.map(item => ({
+        date: convertDate(item.date),
+        count: item.count
+      }));
+  
+  return (
+    <div className='pt-4'>
+    <CalendarHeatmap
+    startDate={startDate}
+    endDate={endDate}
+    values={formattedData}
+    classForValue={(value) => {
+      if (!value) {
+        return 'color-empty';
+      }
+      return `color-scale-${Math.min(value.count, 5)}`;
+    }}
+    tooltipDataAttrs={(value) => {
+      if (!value || !value.date) {
+        return null;
+      }
+      else{
+        return {
+            'data-tooltip-id': 'heatmap-tooltip',
+            'data-tooltip-content': `${value.date}: ${value.count} questions`,
+          };
+      }
+   
+    }}
+    showWeekdayLabels
+/>
+    <Tooltip id="heatmap-tooltip" />
+    </div>
+  )
+}
+
+export default HeatMap2

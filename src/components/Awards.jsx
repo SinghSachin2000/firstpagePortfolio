@@ -24,14 +24,14 @@ const Awards = () => {
                 {showMore && (
                     <div className='fixed inset-0 bg-black opacity-50 z-20' onClick={handleShowMore}></div>
                 )}
-                <div className='w-[400px] h-[200px] bg-white m-10 rounded-2xl p-4 relative '>
+                <div className='w-[350px] sm:w-[400px] h-[200px] bg-white m-10 rounded-2xl p-4 relative '>
                     <div className='font-bold text-slate-600'>AWARDS</div>
                     <div className='flex flex-col items-center'>
                         <div className='flex'>
-                            <img src={photo1} alt="" width="90px" height='90px' className='' />
-                            <img src={photo2} alt="" width="90px" height='90px' className='mt-2' />
-                            <img src={photo3} alt="" width="90px" height='90px' className='' />
-                            <img src={photo4} alt="" width="90px" height='90px' className='' />
+                            <img src={photo1} alt=""  height='90px' className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
+                            <img src={photo2} alt="" width="90px"  className='mt-2 w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
+                            <img src={photo3} alt="" width="90px"  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
+                            <img src={photo4} alt="" width="90px"  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                         </div>
                         <div className='font-bold text-slate-600'>...</div>
                         <div className='font-bold text-slate-600 cursor-pointer' onClick={handleShowMore}>show more</div>
@@ -40,7 +40,7 @@ const Awards = () => {
 
                 {showMore && (
                     <div className='fixed inset-0 z-40 flex items-center justify-center'>
-                        <div className='w-[500px] h-[600px] bg-white rounded-2xl border border-gray-300 p-4 relative z-50'>
+                        <div className='w-[400px] sm:w-[500px] h-[500px] sm:h-[600px] bg-white rounded-2xl border border-gray-300 p-4 relative z-50'>
 
                         <div className='flex justify-between'>
                         <div className='font-bold text-slate-600 mb-4'>AWARDS</div>
@@ -48,38 +48,38 @@ const Awards = () => {
                         </div>
 
                             <div className='flex flex-wrap justify-around'>
-                                <div className='p-4'>
-                                    <img src={photo1} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo1} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
-                                <div className='p-4'>
-                                    <img src={photo2} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo2} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
-                                <div className='p-4'>
-                                    <img src={photo3} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo3} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
-                                <div className='p-4'>
-                                    <img src={photo4} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo4} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
-                                <div className='p-4'>
-                                    <img src={photo5} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo5} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
-                                <div className='p-4'>
-                                    <img src={photo6} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo6} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
-                                <div className='p-4'>
-                                    <img src={photo7} alt="" width="90px" height='90px' className='' />
+                                <div className='p-2 sm:p-4'>
+                                    <img src={photo7} alt=""  className='w-[70px] sm:w-[90px] h-[70px] sm:h-[90px]' />
                                     <div>2022 Medal ...</div>
                                     <div>2022-12-29</div>
                                 </div>
